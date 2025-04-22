@@ -8,12 +8,12 @@
     body {
       font-family: Arial, sans-serif;
       background: #f4f4f4;
-      margin: 0;
-      padding: 0;
+      color: #333;
+      padding: 20px;
     }
     .ebook-container {
       width: 80%;
-      margin: 50px auto;
+      margin: 0 auto;
       background: #fff;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 30px;
@@ -22,12 +22,7 @@
     .title {
       text-align: center;
       font-size: 2.5em;
-      color: #333;
-    }
-    .content {
-      font-size: 1.1em;
-      line-height: 1.8;
-      color: #444;
+      margin-bottom: 20px;
     }
     .page {
       display: none;
@@ -35,21 +30,21 @@
     .page.active {
       display: block;
     }
-    .pagination {
+    .navigation {
       text-align: center;
       margin-top: 30px;
     }
-    .pagination button {
-      background: #fdd835;
+    .navigation button {
+      background-color: #fdd835;
       color: black;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 1.1em;
+      font-size: 1em;
     }
-    .pagination button:hover {
-      background: #fbc02d;
+    .navigation button:hover {
+      background-color: #fbc02d;
     }
   </style>
 </head>
@@ -57,35 +52,30 @@
 
   <div class="ebook-container">
     <div class="title">Como Crescer nas Redes Sociais</div>
-    <div class="content">
-      <div class="page active" id="page-1">
-        <h2>Introdução</h2>
-        <p>Bem-vindo ao nosso eBook sobre como crescer nas redes sociais. Neste eBook, você vai aprender as estratégias que influenciadores usam para aumentar seu engajamento e atrair mais seguidores.</p>
-        <p>O mundo digital está em constante mudança, e para ser bem-sucedido nas redes sociais, é importante estar sempre atualizado sobre as novas tendências.</p>
-      </div>
+    
+    <!-- Page 1 -->
+    <div class="page active" id="page-1">
+      <h2>Introdução</h2>
+      <p>Bem-vindo ao nosso eBook sobre como crescer nas redes sociais. Neste eBook, você aprenderá as estratégias que os influenciadores usam para aumentar seu engajamento e atrair mais seguidores.</p>
+      <p>O mundo digital está em constante mudança, e para ser bem-sucedido nas redes sociais, é importante estar sempre atualizado sobre as novas tendências.</p>
+    </div>
+    
+    <!-- Page 2 -->
+    <div class="page" id="page-2">
+      <h2>Capítulo 1: Entendendo o Algoritmo</h2>
+      <p>Os algoritmos das redes sociais determinam como seu conteúdo é exibido para os seguidores. Aprender como eles funcionam é fundamental para otimizar seu conteúdo e alcançar mais pessoas.</p>
+    </div>
+    
+    <!-- Page 3 -->
+    <div class="page" id="page-3">
+      <h2>Capítulo 2: Criando Conteúdo Atraente</h2>
+      <p>Agora que você entende os algoritmos, é hora de aprender a criar conteúdo que os algoritmos vão adorar. Use imagens de alta qualidade, textos interessantes e vídeos envolventes.</p>
+    </div>
 
-      <div class="page" id="page-2">
-        <h2>Capítulo 1: Entendendo o Algoritmo</h2>
-        <p>Os algoritmos das redes sociais determinam como seu conteúdo é exibido para os seguidores. Aprender como eles funcionam é fundamental para otimizar seu conteúdo e alcançar mais pessoas.</p>
-        <p>Existem diferentes tipos de algoritmos, cada um com suas próprias regras. Para o Instagram, por exemplo, a relevância do conteúdo e a interação dos seguidores são cruciais.</p>
-      </div>
-
-      <div class="page" id="page-3">
-        <h2>Capítulo 2: Criando Conteúdo Atraente</h2>
-        <p>Agora que você entende os algoritmos, é hora de aprender a criar conteúdo que os algoritmos vão adorar. Use imagens de alta qualidade, textos interessantes e vídeos envolventes.</p>
-        <p>Lembre-se, o conteúdo que gera mais interações será promovido mais vezes.</p>
-      </div>
-
-      <div class="page" id="page-4">
-        <h2>Capítulo 3: Engajamento e Crescimento</h2>
-        <p>Engajamento é a chave para o sucesso nas redes sociais. Responda aos comentários, compartilhe histórias, e crie interações significativas com seus seguidores.</p>
-        <p>Crescer nas redes sociais exige consistência. Publique regularmente e analise o desempenho do seu conteúdo.</p>
-      </div>
-
-      <div class="pagination">
-        <button id="prev" onclick="changePage('prev')">Página Anterior</button>
-        <button id="next" onclick="changePage('next')">Próxima Página</button>
-      </div>
+    <!-- Navigation -->
+    <div class="navigation">
+      <button onclick="changePage('prev')">Página Anterior</button>
+      <button onclick="changePage('next')">Próxima Página</button>
     </div>
   </div>
 
